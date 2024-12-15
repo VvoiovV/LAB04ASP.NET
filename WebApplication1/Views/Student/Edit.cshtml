@@ -1,0 +1,29 @@
+﻿@model WebApplication1.Models.StudentViewModel
+
+<h1>Edit Student</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IndexNumber" class="control-label"></label>
+        <input asp-for="IndexNumber" class="form-control" />
+        <span asp-validation-for="IndexNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birth" class="control-label"></label>
+        <input asp-for="Birth" type="date" class="form-control" />
+        <span asp-validation-for="Birth" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<a asp-action="Index">Back to List</a>
