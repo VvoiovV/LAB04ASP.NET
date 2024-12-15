@@ -23,5 +23,8 @@ namespace ClassLibrary1.Entities
         public int StudentID { get; set; }
         public Grade? Grade { get; set; }
 
+        public StudentEntity Student { get; set; }
+        public CourseEntity Course { get; set; }
+
     }
 }

@@ -33,7 +33,12 @@ namespace ClassLibrary1.Entities
         [Column("birth_date")]
         public DateTime Birth { get; set; }
 
-        public ICollection<EnrollmentEntity> Enrollments { get; set; }
+        public ICollection<EnrollmentEntity> Enrollments { get; set; } = new List<EnrollmentEntity>();
+
+        public StudentEntity()
+        {
+            Enrollments = new HashSet<EnrollmentEntity>();
+        }
 
     }
 }

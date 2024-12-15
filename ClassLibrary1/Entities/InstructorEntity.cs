@@ -22,7 +22,12 @@ namespace ClassLibrary1.Entities
         [Required] 
         public string AcademicTitle { get; set; }
 
-        public ICollection<CourseEntity> Courses { get; set; }
+        public ICollection<CourseEntity> Courses { get; set; } = new List<CourseEntity>();
+
+        public InstructorEntity()
+        {
+            Courses = new HashSet<CourseEntity>();
+        }
 
     }
 }
